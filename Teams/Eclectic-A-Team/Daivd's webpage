@@ -1,0 +1,26 @@
+<a href="">Home</a>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Dave's page</title>
+</head>
+
+<body>
+
+<p><b>BIO</b>: My name is Dave, I'm a Jr. this year and a transfer student.<br>I like video games, food and sports. 
+I am really looking forward to<br>learning in this class. Not great at writing bios so guess thats it really.</p>
+
+
+<p><b>Expectations</b>: I'm expecting this class to be a great learning experience for<br> me. I already have a pretty solid foundation on
+the basics of programming. I<br>believe this class will help me expand my knowledge of web tech.
+
+<p><b>Programming background</b>: Html, CSS, html5 and some java
+
+
+<p><span style="color:lightblue"> Favorite qoute: Experience is the teacher of all things.<sub> ~ Julius Caeser</span> </p>
+
+<p>For more info just ask</p> 
+
+
+</body>
+</html>
