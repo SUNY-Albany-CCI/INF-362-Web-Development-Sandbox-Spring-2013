@@ -1,0 +1,43 @@
+
+This is Sarun's directory for assignments
+=======
+
+This directory is intended to host class assignments.
+
+Please create a folder with your name and add your assignments to this folder.
+
+To do that: (I will use dima Kassab as an example, please be sure to REPLACE that with your own name)
+
+log in to your account using PuTTy. The host name is: 166.78.129.118
+Authenticate yourself using:
+>> exec ssh-agent bash
+>> ssh-add ~/.ssh/[yourname]
+for example, ssh-add ~/.ssh/Dima_Kassab
+
+>> cd INF-362-Web-Development-Sandbox-Spring-2013/
+>> git branch MyFirstBranch
+
+I am assuming you have that branch? if not, do
+>> git branch -b MyFirstBranch
+
+then,
+
+>> cd Assignments
+>> mkdir Dima_Kassab (Replace Dima_Kassab with your name)
+>> nano README
+
+Inside this file write something like this is Dima's Directory, and then save the file.
+
+Now you can add your directory through github:
+>> cd  .. (this will take you to the parrent directory)
+>> git  add  Dima_Kassab/ (don't forget to use your directory name instead of Dima_Kassab) 
+>> git  commit  -m  "adding my directory"
+>> git  status (This will show you what will be committed)
+
+>> git  checkout  master
+>> git  branch (You should see that "master" is the branch now)
+>> git  pull  origin  master
+>> git  merge --no-ff  MyFirstBranch
+>> git  push  origin  master
+
+
