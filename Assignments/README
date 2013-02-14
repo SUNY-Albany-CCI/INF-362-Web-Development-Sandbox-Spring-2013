@@ -1,4 +1,7 @@
 
+This is Sarun's directory for assignments
+=======
+
 This directory is intended to host class assignments.
 
 Please create a folder with your name and add your assignments to this folder.
@@ -36,4 +39,5 @@ Now you can add your directory through github:
 >> git  pull  origin  master
 >> git  merge --no-ff  MyFirstBranch
 >> git  push  origin  master
+
 
