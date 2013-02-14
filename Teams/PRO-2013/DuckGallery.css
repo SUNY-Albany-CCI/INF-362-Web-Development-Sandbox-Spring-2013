@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+  
+html {
+  background:url(Blue.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+@font-face {
+	font-family:Steinerlight;
+	src: url('Steinerlight.ttf');
+}
+#header {
+	font-size:70px;
+	font-weight:bold;
+	font-family:Steinerlight;
+	margin: 0 auto 0 auto;
+	width: 728px;
+	background-color: #FF9;
+	text-align: left;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	-moz-box-shadow: 0 0 10px 10px #ffffcc;
+	-webkit-box-shadow: 0 0 10px 10px #ffffcc;
+	box-shadow: 0 0 10px 10px #ffffcc;
+	color:#9999ff;
+}
+#main {
+	width:1000px;
+	margin:0 auto;
+	background:#FF9;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	-moz-box-shadow: 0 0 10px 10px #ffffcc;
+	-webkit-box-shadow: 0 0 10px 10px #ffffcc;
+	box-shadow: 0 0 10px 10px #ffffcc;
+	font-family:Steinerlight;
+}
+h1 {
+	padding-top:10px;
+	font-size:55px;
+	font-family:Steinerlight;
+	text-align:center;
+	color:#9999ff;
+}
+p {
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#9999ff;
+}
+#sidebar {
+	position:relative;
+	top:35px;
+	padding-top:10px;
+	margin:0 auto;
+	width:195px;
+	float:right;
+	background:#FF9;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	-moz-box-shadow: 0 0 10px 10px #ffffcc;
+	-webkit-box-shadow: 0 0 10px 10px #ffffcc;
+	box-shadow: 0 0 10px 10px #ffffcc;
+	font-family:Steinerlight;
+	font-weight:bold;
+	font-color:#9999ff;
+}
+.form {
+	width:600px;
+	margin:0 auto;
+	padding-bottom:150px;
+	background:#FF9;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	-moz-box-shadow: 0 0 10px 10px #9999ff;
+	-webkit-box-shadow: 0 0 10px 10px #9999ff;
+	box-shadow: 0 0 10px 10px #9999ff;
+	font-family:Steinerlight;
+	font-weight:bold;
+	
+	
+	
+	
+	
+}
+.form label { display: inline-block; width: 150px;
+	font-family:Steinerlight;
+	font-weight:bold;
+	font-size:16px;
+	
+ } 
