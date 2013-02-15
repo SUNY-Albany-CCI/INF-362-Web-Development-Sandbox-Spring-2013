@@ -1,0 +1,18 @@
+<html> 
+<head><title>headings and styles</title></head>
+
+<body style="background-color:red">
+
+<p style="font-family:comic sans ms;color:Yellow;font-size:30px">Dogs</p>
+&
+<p style="font-family:arial;color:Blue;font-size:30px">Trees</p>
+
+<a href=http://google.com> <img src="tree.jpg" height="200px" alt=“tree"/></a>
+
+<img src="tree.jpg" height="200px" alt=“tree"/> 
+
+<img src="dog.jpg" height="200px" alt=“dog"/> 
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+<title> Ducks Facts </title>
+
+    <style>
+
+body
+{
+background-image:url('http://img132.imageshack.us/img132/665/smileyicongifs671.gif');
+}
+
+IMG.footer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+      
+      #myCanvas {
+
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 400px;
+    border: 10px solid yellow;
+}
+
+       p {text-align:center;font-family:"Times New Roman", Times, serif;font-size:40px;font-weight:bold;color: #DC0416;text-decoration:underline;}
+
+      ul 
+{
+list-style-image:url('http://img200.imageshack.us/img200/5494/ducky.gif');margin-left: 8em;padding-left: 0;
+font-family:"Times New Roman", Times, serif;font-size:21px;font-weight:bold;line-height:180%;color: blue;
+}
+
+
+    </style>
+  </head>
+  <body>
+
+
+    <canvas id="myCanvas" width="500" height="380"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
+
+      imageObj.onload = function() {
+        
+        context.fillStyle   = '#00FFFF'; 
+        context.fillRect  (0,   0, 500, 380);
+        context.drawImage(imageObj, 92, 20);
+
+
+  context.font = 'bold 40pt Calibri';
+  context.fillStyle = '#BF2A2A'; 
+	context.fillText('Ducks Facts', 128 , 330);
+        
+      };
+      imageObj.src = 'http://img811.imageshack.us/img811/5325/168138.jpg';
+    </script>
+    </br> </br>
+
+<IMG class="footer" src="http://img12.imageshack.us/img12/4521/divider052.gif">
+
+	<p> Ten Fun Facts About Ducks </p>
+
+<ul>
+
+<li>A baby duck is called a duckling. An adult male is a drake, while an adult female duck is called a hen or a duck. A group of ducks can be called a raft, team or padding.</li>
+
+<li>All types of ducks have effectively waterproof feathers due to their intricate feather structures and a waxy coating that even when they dive underwater, their feathers stay completely dry.</li>
+
+<li>Almost all of duck species are monogamous, which is the condition of having only one breeding partner, for breeding season but they do not mate for life.</li>
+
+<li>Most drakes are silent and very few of them make a sound of "quack", but what they actually do are squeaks, grunts, groans, chirps and growls.</li>
+
+<li>As soon as ducklings finish hatching, a female duck will lead them up to a half mile or more so as to find a suitable water source for ducklings for swimming and feeding.</li>
+
+<li>All types of ducks are part of the bird family which is called "Anatidae" and ducks' species can be found worldwide on every continent, except Antarctica.</li>
+
+<li>Ducks are considered as omnivorous and opportunistic eaters that they will eat grass, insects, fruits, fish and other types of food.</li>
+
+<li>Ducks' feet have no nerves or blood vessels that means ducks never feel the cold when they swim in icy cold water.</li>
+
+<li>Ducks always keep clean by preening themselves with their beaks that they also line their nests with feathers plucked from their chest.</li>
+
+<li>Ducks were once wild until they were domesticated by the Chinese hundreds of years ago</li>
+
+</ul>
+
+</br>
+
+<IMG class="footer" src="http://img338.imageshack.us/img338/7715/divider049.gif">
+
+</br>
+ 
+</body>
+</html>

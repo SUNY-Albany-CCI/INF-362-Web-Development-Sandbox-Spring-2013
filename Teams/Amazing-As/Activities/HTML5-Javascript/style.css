@@ -1,0 +1,37 @@
+/****
+* This code is adopted from The Pragmatic Bookshelf. http://www.pragmaticprogrammer.com/titles/bhh5
+****/
+
+#menu ul{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+#form-content ol {
+list-style-type:none;
+margin:0;
+padding:0;
+}
+ 
+#images img{
+-webkit-user-drag
+}
+
+#images{
+float: left;
+width: 240px;
+margin-right: 10px;
+}
+
+#preview{
+float: left;
+width: 536px;
+background-color: #ddd;
+height: 402px;
+}
+
+.hover{
+border: 10px solid #000;
+background-color: #bbb !important;
+}
