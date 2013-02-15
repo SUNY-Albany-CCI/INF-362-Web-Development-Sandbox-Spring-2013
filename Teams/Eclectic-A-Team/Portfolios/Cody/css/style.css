@@ -1,0 +1,35 @@
+body{
+	background:url(../img/brushed_metal.jpg);
+}
+
+h1{
+	background-color:white;
+	font-size:300%;
+	text-align:center;
+	box-shadow: 10px 10px 5px #888888;
+}
+	
+a:visited{
+  color:#11a2db;
+}
+
+p{
+	font-size:18px;
+}
+
+.content_box{
+	margin-right:25%;
+	margin-left:25%;
+	padding-top:5%;
+	padding-bottom:5%;
+	padding-left:5%;
+	padding-right:5%;
+	background-color:white;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+#container{
+
+}
+
+
