@@ -11,23 +11,46 @@ http.createServer( function(req, res) {
 
       res.writeHead(200, {'content-type': 'text/plain'});
 
-      res.write('Welcome to the Spreadsheet reader !\n');
+      res.write('Welcome to Currency Exchange Rates of Thai(Baht) & Japanese(Yen) !\n\n');
+      
+      
+      var row1   = data[0];
+      var cell11 = row1[1];
+      
+      var row2   = data[0];
+      var cell22 = row2[2];
 
-      var row   = data[0];
-      var cell = row[0];
+      res.write("Currency = ");
+      res.write(cell11);
+      res.write(" | ");
+      res.write(cell22);
+      res.write("\n\n");
+      
+      var row3   = data[2];
+      var cell33 = row3[0];
+      
+      var row4 = data[2];
+      var cell44 = row4[1];
+      
+      var row5 = data[2];
+      var cell55 = row5[2];
+      
+      res.write(cell33);
+      res.write(" = ");
+      res.write(cell44);
+      res.write(" | ");
+      res.write(cell55);
+      res.write("\n\n");
+      
 
-      res.write("Database cell = ");
-      res.write(cell);
-      res.write("\n");
+      res.end("Sayonara !\n");
 
-      res.end("Good Bye !\n");
-
-      console.log("Database cell = ", cell);
+      console.log("Currency = ", cell11, "|", cell22);
 
   });
 
 
-}).listen(8121);
+}).listen(8124);
 
 
-console.log('Server running on port 8121');
+console.log('Server running on port 8124');
