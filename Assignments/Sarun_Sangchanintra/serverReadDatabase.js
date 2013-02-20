@@ -15,14 +15,19 @@ http.createServer( function(req, res) {
 
       var row1   = data[0];
       var cell11 = row1[1];
+      
+      var row2   = data[0];
+      var cell22 = row2[2];
 
       res.write("Currency = ");
       res.write(cell11);
+      res.write("|");
+      res.write(cell22);
       res.write("\n");
 
       res.end("Sayonara !\n");
 
-      console.log("Currency = ", cell11);
+      console.log("Currency = ", cell11, cell22);
 
   });
 
