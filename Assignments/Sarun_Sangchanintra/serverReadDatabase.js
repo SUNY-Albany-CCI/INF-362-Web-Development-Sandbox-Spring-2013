@@ -11,18 +11,18 @@ http.createServer( function(req, res) {
 
       res.writeHead(200, {'content-type': 'text/plain'});
 
-      res.write('Welcome to the Spreadsheet reader !\n');
+      res.write('Welcome to Currency Exchange Rates of Thai(Baht) & Japanese(Yen) !\n');
 
-      var row1   = data[0];
-      var cell11 = row1[0];
+      var row1   = data1[0];
+      var cell1 = row1[1];
 
       res.write("Database cell11 = ");
-      res.write(cell11);
+      res.write(cell1);
       res.write("\n");
 
       res.end("Good Bye !\n");
 
-      console.log("Database cell11 = ", cell11);
+      console.log("Database cell11 = ", cell1);
 
   });
 
