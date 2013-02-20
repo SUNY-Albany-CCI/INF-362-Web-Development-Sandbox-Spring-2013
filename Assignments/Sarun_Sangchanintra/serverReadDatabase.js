@@ -14,7 +14,7 @@ http.createServer( function(req, res) {
       res.write('Welcome to Currency Exchange Rates !\n');
 
       var row   = data[0];
-      var cell = row[1];
+      var cell = row[2];
 
       res.write("Database cell = ");
       res.write(cell);
