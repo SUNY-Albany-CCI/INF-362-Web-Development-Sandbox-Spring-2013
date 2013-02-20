@@ -17,7 +17,7 @@ http.createServer( function(req, res) {
       var cell11 = row1[1];
 
       res.write("Database cell11 = ");
-      res.write(cell1);
+      res.write(cell11);
       res.write("\n");
 
       res.end("Good Bye !\n");
