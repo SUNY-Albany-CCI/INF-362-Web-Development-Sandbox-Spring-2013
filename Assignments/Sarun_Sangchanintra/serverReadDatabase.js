@@ -24,7 +24,19 @@ http.createServer( function(req, res) {
       res.write(cell11);
       res.write(" | ");
       res.write(cell22);
-      res.write("\n\n");
+      res.write("\n");
+      
+      var row3   = data[1];
+      var cell33 = row3[0];
+      
+      var row4 = data[1];
+      var cell44 = row4[1];
+      
+      var row5 = data[1];
+      var cell55 = data[2];
+      
+      res.write(cell33, "=", cell44, "|", cell55);
+      
 
       res.end("Sayonara !\n");
 
