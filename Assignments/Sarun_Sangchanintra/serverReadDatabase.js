@@ -13,7 +13,7 @@ http.createServer( function(req, res) {
 
       res.write('Welcome to Currency Exchange Rates of Thai(Baht) & Japanese(Yen) !\n');
 
-      var row1   = data1[0];
+      var row1   = data[0];
       var cell11 = row1[1];
 
       res.write("Database cell11 = ");
