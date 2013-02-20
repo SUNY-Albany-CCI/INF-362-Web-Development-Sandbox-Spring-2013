@@ -11,10 +11,10 @@ http.createServer( function(req, res) {
 
       res.writeHead(200, {'content-type': 'text/plain'});
 
-      res.write('Welcome to the Spreadsheet reader !\n');
+      res.write('Welcome to Currency Exchange Rates !\n');
 
       var row   = data[0];
-      var cell = row[0];
+      var cell = row[1];
 
       res.write("Database cell = ");
       res.write(cell);
