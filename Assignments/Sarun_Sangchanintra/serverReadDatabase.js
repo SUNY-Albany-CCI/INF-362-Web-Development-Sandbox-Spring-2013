@@ -20,7 +20,7 @@ http.createServer( function(req, res) {
       res.write(cell11);
       res.write("\n");
 
-      res.end("Sayōnara !\n");
+      res.end("Sayonara !\n");
 
       console.log("Database cell11 = ", cell11);
 
