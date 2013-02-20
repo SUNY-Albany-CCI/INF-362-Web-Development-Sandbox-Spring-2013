@@ -13,8 +13,8 @@ http.createServer( function(req, res) {
 
       res.write('Welcome to Currency Exchange Rates !\n');
 
-      var row1   = data1[0];
-      var cell1 = row1[1];
+      var row   = data[0];
+      var cell = row[1];
 
       res.write("Currency = ");
       res.write(cell1);
