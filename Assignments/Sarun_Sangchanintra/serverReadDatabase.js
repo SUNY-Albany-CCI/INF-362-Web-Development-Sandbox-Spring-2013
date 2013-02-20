@@ -11,8 +11,9 @@ http.createServer( function(req, res) {
 
       res.writeHead(200, {'content-type': 'text/plain'});
 
-      res.write('Welcome to Currency Exchange Rates of Thai(Baht) & Japanese(Yen) !\n');
-
+      res.write('Welcome to Currency Exchange Rates of Thai(Baht) & Japanese(Yen) !\n\n');
+      
+      
       var row1   = data[0];
       var cell11 = row1[1];
       
@@ -23,7 +24,7 @@ http.createServer( function(req, res) {
       res.write(cell11);
       res.write(" | ");
       res.write(cell22);
-      res.write("\n");
+      res.write("\n\n");
 
       res.end("Sayonara !\n");
 
