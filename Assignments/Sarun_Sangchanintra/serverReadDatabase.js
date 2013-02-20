@@ -21,7 +21,7 @@ http.createServer( function(req, res) {
 
       res.write("Currency = ");
       res.write(cell11);
-      res.write("| ");
+      res.write(" | ");
       res.write(cell22);
       res.write("\n");
 
