@@ -27,7 +27,7 @@ http.createServer( function(req, res) {
 
       res.end("Sayonara !\n");
 
-      console.log("Currency = ", cell11, cell22);
+      console.log("Currency = ", cell11, "|", cell22);
 
   });
 
