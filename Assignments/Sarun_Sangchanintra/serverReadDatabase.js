@@ -13,8 +13,8 @@ http.createServer( function(req, res) {
 
       res.write('Welcome to Currency Exchange Rates of Thai(Baht) & Japanese(Yen) !\n');
 
-      var row1   = data1[0];
-      var cell1 = row1[1];
+      var row1   = data[0];
+      var cell11 = row1[1];
 
       res.write("Database cell11 = ");
       res.write(cell1);
@@ -22,7 +22,7 @@ http.createServer( function(req, res) {
 
       res.end("Good Bye !\n");
 
-      console.log("Database cell11 = ", cell1);
+      console.log("Database cell11 = ", cell11);
 
   });
 
