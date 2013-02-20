@@ -13,16 +13,16 @@ http.createServer( function(req, res) {
 
       res.write('Welcome to Currency Exchange Rates !\n');
 
-      var row   = data[0];
-      var cell = row[1];
+      var row1   = data1[0];
+      var cell1 = row1[1];
 
-      res.write("Database cell = ");
-      res.write(cell);
+      res.write("Currency = ");
+      res.write(cell1);
       res.write("\n");
 
-      res.end("Good Bye !\n");
+      res.end("Sayōnara !\n");
 
-      console.log("Database cell = ", cell);
+      console.log("Database cell = ", cell1);
 
   });
 
