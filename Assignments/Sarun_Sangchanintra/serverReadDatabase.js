@@ -11,23 +11,23 @@ http.createServer( function(req, res) {
 
       res.writeHead(200, {'content-type': 'text/plain'});
 
-      res.write('Welcome to Currency Exchange Rates !\n');
+      res.write('Welcome to the Spreadsheet reader !\n');
 
-      var row   = data[0];
-      var cell = row[1];
+      var row1   = data[0];
+      var cell11 = row1[0];
 
-      res.write("Currency = ");
-      res.write(cell1);
+      res.write("Database cell11 = ");
+      res.write(cell11);
       res.write("\n");
 
-      res.end("Sayōnara !\n");
+      res.end("Good Bye !\n");
 
-      console.log("Database cell = ", cell1);
+      console.log("Database cell11 = ", cell11);
 
   });
 
 
-}).listen(8121);
+}).listen(8124);
 
 
-console.log('Server running on port 8121');
+console.log('Server running on port 8124');
