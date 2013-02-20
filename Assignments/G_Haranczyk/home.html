@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Greg Personal Portfolio</title>
+<style type="text/css">
+
+body
+{
+background-image:url("http://www.albany.edu/~gh445682/images/background.png");
+background-repeat:repeat;
+}
+
+
+.content {
+  background-image: url("http://www.albany.edu/~gh445682/images/content.png");
+	width: 78%;
+	margin-top: 30px;
+	margin-left: 80px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+	
+.contentfont {
+	color: #FFF;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 18px;
+}
+</style>
+
+<script language="JavaScript1.1">
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+<img src="http://www.albany.edu/~gh445682/images/header.png" alt="header" width="800" height="117" hspace="125" border="0" usemap="#Map">
+<map name="Map">
+  <area shape="rect" coords="520,95,592,117" href="Home">
+  <area shape="rect" coords="607,95,699,117" href="Projects">
+  <area shape="rect" coords="714,95,776,117" href="Skills">
+</map>
+</div>
+
+<div class="content">
+  <p>
+
+<a href="javascript:gotoshow()"><img src="http://www.albany.edu/~gh445682/images/manhattan.png" name="slide" width=450 height=350 hspace="175" vspace="50" border=0 align="middle"></a>
+<script>
+slideshowimages("http://www.albany.edu/~gh445682/images/manhattan.png","http://www.albany.edu/~gh445682/images/knicks.png","http://www.albany.edu/~gh445682/images/yankees.png","http://www.albany.edu/~gh445682/images/poland.png","http://www.albany.edu/~gh445682/images/liberty.JPG")
+
+var slideshowspeed=2000
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-1)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+
+</script></p>
+  <p> <span class="contentfont">My name is Grzegorz Haranczyk. Apologies for the crazy name, I wasn't born here. I actually was born in Poland. Just call me Greg; the simple translation stops me from sounding like an alien. When I was one, my family and I moved to America. We have lived in New York City ever since. I was raised in Brooklyn and currently live in Queens. I decided to venture out of New York City for college, choosing University at Albany to be my temporary home. I am currently a junior at the university majoring in information science with a minor in political science. </span></p>
+    <p><span class="contentfont">I decided to pursue a major in information science because computers and technology have always interested me. I was always curious to find out how the Internet works, how to make websites and programs. My education at the university allows me to develop those skills to a higher level.</span></p>
+<p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
+
+</body>
+</html>
