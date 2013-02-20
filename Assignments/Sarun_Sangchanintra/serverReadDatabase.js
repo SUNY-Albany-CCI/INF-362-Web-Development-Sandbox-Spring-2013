@@ -26,13 +26,13 @@ http.createServer( function(req, res) {
       res.write(cell22);
       res.write("\n\n");
       
-      var row3   = data[1];
+      var row3   = data[2];
       var cell33 = row3[0];
       
-      var row4 = data[1];
+      var row4 = data[2];
       var cell44 = row4[1];
       
-      var row5 = data[1];
+      var row5 = data[2];
       var cell55 = row5[2];
       
       res.write(cell33);
