@@ -35,7 +35,12 @@ http.createServer( function(req, res) {
       var row5 = data[1];
       var cell55 = row5[2];
       
-      res.write(cell33, "=", cell44, "|", cell55);
+      res.write(cell33);
+      res.write(" = ");
+      res.write(cell44);
+      res.write(" | ");
+      res.write(cell55);
+      res.write("\n");
       
 
       res.end("Sayonara !\n");
