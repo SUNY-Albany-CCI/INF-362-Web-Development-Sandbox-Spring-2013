@@ -24,7 +24,7 @@ http.createServer( function(req, res) {
       res.write(cell11);
       res.write(" | ");
       res.write(cell22);
-      res.write("\n");
+      res.write("\n\n");
       
       var row3   = data[1];
       var cell33 = row3[0];
@@ -40,7 +40,7 @@ http.createServer( function(req, res) {
       res.write(cell44);
       res.write(" | ");
       res.write(cell55);
-      res.write("\n");
+      res.write("\n\n");
       
 
       res.end("Sayonara !\n");
