@@ -1,7 +1,7 @@
 .pad{
-            padding-left:10px;padding-right:10px
-         }
-         body
+padding-left:10px;padding-right:10px
+}
+body
 {
 background-color:#000000;
 }
@@ -17,12 +17,16 @@ color:#FF0040;
 text-align:center;
 font-family:"Verdana";
 }
-p
+p, table
 {
 font-family:"Verdana";
 font-size:14px;
 color:#FFFFFF;
 }
+table{
+	align:center;
+}
+
 a:link {color:#B93B8F;} 
 a:visited {color:#FF0040;} 
 a:hover {color:#FF0040;}
