@@ -24,7 +24,8 @@ font-size:14px;
 color:#FFFFFF;
 }
 table{
-	position:center;
+margin-left: auto;
+margin-right: auto;
 }
 
 a:link {color:#B93B8F;} 
