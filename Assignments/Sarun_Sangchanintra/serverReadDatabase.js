@@ -170,6 +170,38 @@ http.createServer( function(req, res) {
       res.write(cell31);
       res.write("\n\n");
       
+      var row32   = data[10];
+      var cell32 = row32[0];
+      
+      var row33 = data[10];
+      var cell33 = row33[1];
+      
+      var row34 = data[10];
+      var cell34 = row34[2];
+      
+      res.write(cell32);
+      res.write(" = ");
+      res.write(cell33);
+      res.write(" | ");
+      res.write(cell34);
+      res.write("\n\n");
+
+      var row35   = data[11];
+      var cell35 = row35[0];
+      
+      var row36 = data[11];
+      var cell36 = row36[1];
+      
+      var row37 = data[11];
+      var cell37 = row37[2];
+      
+      res.write(cell35);
+      res.write(" = ");
+      res.write(cell36);
+      res.write(" | ");
+      res.write(cell37);
+      res.write("\n\n");
+      
       res.end("Sayonara !\n");
 
       console.log("Currency = ", cell11, "|", cell22);
