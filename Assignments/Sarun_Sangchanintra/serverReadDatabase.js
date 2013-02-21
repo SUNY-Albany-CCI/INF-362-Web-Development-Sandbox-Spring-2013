@@ -74,6 +74,54 @@ http.createServer( function(req, res) {
       res.write(cell12);
       res.write("\n\n");
       
+      var row13   = data[4];
+      var cell13 = row13[0];
+      
+      var row14 = data[4];
+      var cell14 = row14[1];
+      
+      var row15 = data[4];
+      var cell15 = row15[2];
+      
+      res.write(cell13);
+      res.write(" = ");
+      res.write(cell14);
+      res.write(" | ");
+      res.write(cell15);
+      res.write("\n\n");
+
+      var row16   = data[5];
+      var cell16 = row16[0];
+      
+      var row17 = data[5];
+      var cell17 = row17[1];
+      
+      var row18 = data[5];
+      var cell18 = row18[2];
+      
+      res.write(cell16);
+      res.write(" = ");
+      res.write(cell17);
+      res.write(" | ");
+      res.write(cell18);
+      res.write("\n\n");
+
+      var row19   = data[6];
+      var cell19 = row19[0];
+      
+      var row20 = data[6];
+      var cell20 = row20[1];
+      
+      var row21 = data[6];
+      var cell21 = row21[2];
+      
+      res.write(cell19);
+      res.write(" = ");
+      res.write(cell20);
+      res.write(" | ");
+      res.write(cell21);
+      res.write("\n\n");
+      
       res.end("Sayonara !\n");
 
       console.log("Currency = ", cell11, "|", cell22);
