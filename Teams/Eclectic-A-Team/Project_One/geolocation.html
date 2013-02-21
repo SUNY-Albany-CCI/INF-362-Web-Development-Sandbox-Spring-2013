@@ -61,41 +61,4 @@
 				});
 			}
 	})();
-</script>ementbyId("namewhatever");
-			name.innerHTML = travel;
-
-			// Check for geolocation support	
-			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(function (position) {
-						// Success!
-						createMap({
-							coords : true,
-							lat : position.coords.latitude,
-							lng : position.coords.longitude
-						});
-					}, 
-					function () {
-						// Gelocation fallback: Defaults to Albany, New York
-						createMap({
-							coords : false,
-							address : "Albany, New York"
-						});
-					}
-				);
-			}
-			else {
-				// No geolocation fallback: Defaults to Albany, New York
-				createMap({
-					coords : false,
-					address : "Albany, Ney York"
-				});
-			}
-	}
 </script>
-</head>
-<body>
-<div id ="namewhatever"> </div>
-<p id="demo">Click the button to get your coordinates:</p>
-<button onclick="Geolocate()">Try It</button>
-</body>
-</html>
