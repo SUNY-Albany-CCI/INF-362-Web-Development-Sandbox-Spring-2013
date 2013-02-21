@@ -1,17 +1,21 @@
-<!DOCTYPE HTML>
+                                            
+<!DOCTYPE html>
 <html>
-<head>
+<body>
+<div id="map"></div>
+<div id="map-directions"></div>
+</body>
+</html>
 <script src="http://maps.google.se/maps/api/js?sensor=false"></script>
 <script>
-  function Geolocate() {
-  	var directionsService = new google.maps.DirectionsService(),
+	(function () {
+		var directionsService = new google.maps.DirectionsService(),
 			directionsDisplay = new google.maps.DirectionsRenderer(),
 			createMap = function (start) {
 				var travel = {
-						origin : (start.coords)? new google.maps.LatLng(start.lat, start.lng) : start.address,
-						destination : "Washington Avenue Armory",
+						origin : (start.coords)? new google.maps.LatLng(start.lat, start.lng) : start.address, destination : "195 Washington Ave Albany, NY 12210",
 						travelMode : google.maps.DirectionsTravelMode.DRIVING
-
+						
 					},
 					mapOptions = {
 						zoom: 6,
@@ -29,8 +33,6 @@
 					}
 				});
 			};
-			var name = document.getElementbyId("namewhatever");
-			name.innerHTML = travel;
 
 			// Check for geolocation support	
 			if (navigator.geolocation) {
@@ -58,12 +60,5 @@
 					address : "Albany, Ney York"
 				});
 			}
-	}
+	})();
 </script>
-</head>
-<body>
-<div id ="namewhatever"> </div>
-<p id="demo">Click the button to get your coordinates:</p>
-<button onclick="Geolocate()">Try It</button>
-</body>
-</html>
