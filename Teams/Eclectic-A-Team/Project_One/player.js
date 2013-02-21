@@ -1,11 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-		<meta charset="utf-8" />
-		<title>
-			Drag & Drop Music Player Testing
-		</title>
-		<style type="text/css">
 			#musicContainer{
 				width:550px;
 				height:400px;
@@ -111,40 +103,3 @@
 				}
 				
 			}
-		</script>
-	</head>
-	
-	<body>
-
-		<p>
-			Drag the image into the box to play a song:		
-		</p>
-		<div id="musicContainer">
-			<div id="dropArea" ondrop="drop(event);startMusic()" ondragover="return dragOver(event)">
-				<!-- This is the play area, images dragged here will play music if they are recognized -->
-			</div>
-			<div id="artist">
-				<!-- Displays the artist name and song title -->
-			</div>
-			<div id="musicList" ondragover="dragOver(event)" ondrop="dropReturn(event)">
-				<!-- Below is the image that can be dragged onto the play area -->
-				<ul class="images">
-					<li>
-						<img class="albumArt" id="vaccines" src="vaccines_coverart.jpg" draggable="true" 
-							ondragstart="return drag(event)" ondragend="dragEnd(event)">
-					</li>
-					<li>
-						<img class="albumArt" id="rockon" src="rockon_coverart.jpg" draggable="true" 
-							ondragstart="return drag(event)" ondragend="dragEnd(event)">
-					</li>
-				</ul>
-			</div>
-		</div>
-		<br>
-		<div id="music" style="display:none;">
-			<!-- When the image is dragged into the specified area a music player will show here -->
-		</div>
-
-
-	</body>
-</html>
