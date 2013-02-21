@@ -4,6 +4,8 @@
 	border-radius:10px;
 	background-color:#878680;
 	position:relative;
+	margin-left: auto;
+margin-right: auto;
 }
 #dropArea{
 	width:175px;
