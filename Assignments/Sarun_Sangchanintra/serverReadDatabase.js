@@ -58,6 +58,22 @@ http.createServer( function(req, res) {
       res.write(cell88);
       res.write("\n\n");
       
+      var row9   = data[3];
+      var cell99 = row9[0];
+      
+      var row10 = data[3];
+      var cell10 = row10[1];
+      
+      var row11 = data[3];
+      var cell12 = row11[2];
+      
+      res.write(cell99);
+      res.write(" = ");
+      res.write(cell10);
+      res.write(" | ");
+      res.write(cell12);
+      res.write("\n\n");
+      
       res.end("Sayonara !\n");
 
       console.log("Currency = ", cell11, "|", cell22);
