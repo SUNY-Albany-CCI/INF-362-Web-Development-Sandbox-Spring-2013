@@ -42,7 +42,7 @@ http.createServer( function(req, res) {
       res.write(cell55);
       res.write("\n\n");
       
-      var row6   = data[3];
+      var row6   = data[2];
       var cell66 = row6[0];
       
       var row7 = data[2];
