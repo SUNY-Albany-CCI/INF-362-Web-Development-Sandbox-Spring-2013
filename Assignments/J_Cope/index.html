@@ -2,15 +2,65 @@
 <html>
 
 <head>
+
 <title>Personal Portfolio</title>
-<script src="rotatingbanner.js" language="javascript" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+//ROTATING BANNER BY CIARAN O'KELLY 2012 - BLOG.CRONDESIGN.COM
+//free to use & distribute just click my ads to say thanks!
+
+var imageCount = 2;  
+var changeSpeed = 3;  
+var fadeSpeed = 0.5; 
+var fps = 25;  
+
+var topImgID
+var changeInterval
+function $(id){
+ return(document.getElementById(id));
+}
+function changeOpac(obj, opacity) {//change the opacity for different browsers:
+ obj = obj.style; 
+ obj.opacity = (opacity / 100);
+ obj.MozOpacity = (opacity / 100);
+ obj.KhtmlOpacity = (opacity / 100);
+ obj.filter = "alpha(opacity=" + opacity + ")";
+}
+function changeImage(){
+ var nextImgID = ( topImgID+1 <= imageCount ? topImgID+1 : 1 ); //get id number of next image in list
+ var nextImg = $('banner'+nextImgID);
+ var lastImg = $('banner'+topImgID);
+ var opac = 0;
+ changeOpac( nextImg, opac) //make next image invisible, then bring it to the top:
+ lastImg.style.zIndex = 2;
+ nextImg.style.zIndex = 3;
+ var fadeInterval = setInterval(function(){ //run fade on interval:
+  if(opac < 100){//continue fade:
+   opac += Math.ceil(100/(fadeSpeed*fps));
+   changeOpac(nextImg, opac);
+  }else{//end fade:
+   lastImg.style.zIndex = 1;
+   clearInterval(fadeInterval);
+  }
+ }, 1000/fps)
+ topImgID = nextImgID; //prepare next fade
+}
+function startBanner(firstImageID){
+ topImgID = (firstImageID==undefined ? 1+Math.floor(Math.random()*(imageCount)) : firstImageID);
+ $('banner'+topImgID).style.zIndex = 2;
+ changeInterval = setInterval(changeImage, changeSpeed*1000);
+}
+</script>
+
 	<style type="text/css">
 	body,
 	html {
 		margin:0;
 		padding:0;
 		color:#000;
-		background:#FF0000;
+		background:#000000;
 	}
 	#wrap {
 		width:750px;
@@ -30,21 +80,46 @@
 		float:left;
 		width:230px;
 		padding:10px;
-		background:#000000;
+		background:#FF0000;
 	}
+	
+	.banner
+	{
+	position:absolute; height:160px; width:733px; top:0px; 
+	}
+		
+	#banner1{
+	background-image:url(images/homebanner1.jpg);
+	}
+	
+	#banner2{
+	background-image:url(images/homebanner2.jpg);
+	}
+	
 	</style>
+
+
 </head>
 
-<body>
+<body onload="startBanner(1)">
+
 
 <div id="wrap">
 
-	<div id="header" align ="center">
-	<img src="/Users/joshcope/Desktop/Spring 13'/INF362/Personal Portfolio/Images/Banners/homebanner1.jpg" 
-	width="733" height="160" id="personalBanner"/>
+	<div id="banner1" class="banner" align="center">
 	</div>
+	<div id="banner2" class="banner" align="center">
+	</div>
+
 	
 	<div id="main">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
     <p>
     <h1><center>Virgil Abloh</h1>    
     <u><center>Education</u>
@@ -93,14 +168,20 @@
     </div>
     
 	<div id="sidebar">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<ul>
-	<li><a href="/Users/joshcope/Desktop/Spring 13'/INF362/Personal Portfolio/index.html">Home Page</a></li>
-	<li><a href="/Users/joshcope/Desktop/Spring 13'/INF362/Personal Portfolio/experience.html">Experience</a></li>
-	<li><a href="/Users/joshcope/Desktop/Spring 13'/INF362/Personal Portfolio/skills.html">Skills</a></li>
+	<li><a href="index.html">Home Page</a></li>
+	<li><a href="experience.html">Experience</a></li>
+	<li><a href="skills.html">Skills</a></li>
 	</ul>
-	<br>
-	<br>
-	<br>
 	<br>
 	<br>
 	<br>
