@@ -42,7 +42,22 @@ http.createServer( function(req, res) {
       res.write(cell55);
       res.write("\n\n");
       
-
+      var row6   = data[3];
+      var cell66 = row6[0];
+      
+      var row7 = data[2];
+      var cell77 = row7[1];
+      
+      var row8 = data[2];
+      var cell88 = row8[2];
+      
+      res.write(cell66);
+      res.write(" = ");
+      res.write(cell77);
+      res.write(" | ");
+      res.write(cell88);
+      res.write("\n\n");
+      
       res.end("Sayonara !\n");
 
       console.log("Currency = ", cell11, "|", cell22);
