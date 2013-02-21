@@ -1,0 +1,43 @@
+body
+{
+  
+background-image:url("http://www.albany.edu/~gh445682/dog/bg.png");
+background-repeat:repeat;
+}
+#sideBar {
+	float: left;
+	width: 22%;
+	margin-left: 62px;
+}
+#Content {
+	float: left;
+	width: 63%;
+	margin-left: 20px;
+}
+
+.container {
+	width: 960px;
+	height: auto;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+#header {
+	margin-left: 62px;
+}
+
+#NavBar {
+	margin-top: 0px;
+	margin-left: 75px;
+}
+
+.description {
+  color: #fff;
+}
+
+.descriptionh {
+  color: #fff;
+}
+
