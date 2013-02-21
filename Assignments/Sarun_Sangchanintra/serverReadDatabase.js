@@ -37,9 +37,9 @@ http.createServer( function(req, res) {
       
       res.write(cell33);
       res.write(" = ");
-      res.write(cell44, "Baht");
+      res.write(cell44);
       res.write(" | ");
-      res.write(cell55, "Yen");
+      res.write(cell55);
       res.write("\n\n");
       
       var row6   = data[2];
