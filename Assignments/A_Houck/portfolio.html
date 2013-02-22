@@ -1,0 +1,66 @@
+
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Adam's Portfolio</title>
+<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+		
+        <div id="header">
+        	<div class="logo"></div>
+            <h1>Adam's Portfolio</h1>
+			<h2> All about my work</h2>
+        </div>
+<div id="bottomContent">
+	<div class="navColumn"> 
+    	<div class="overview">
+                	<img id="img" /> </div>
+    	<div class="link"><a href="index.html">Home</a></div>
+        <div class="link"><a href="portfolio.html">Portfolio</a></div>
+        <div class="link"><a href="skills.html">Skills</a></div>
+        
+<div id="navBottom"></div>
+    </div>
+	<div class="contentColumn">
+	
+      <div class="contentTop"></div>
+      <div class="contentMain"> 
+            <h1>Portfolio</h1>
+			<h2 class="desc">Custom Mass Emailing Program</h2>
+			<p> <b>Situation:</b> A Genesistems client wanted to complete their billing process electronically to save on postage. My supervisor was trying to implement a email notification system with the K-Print service (using KCML). The service did not print out the appropriate PDF template while using its email features.
+			</p><img src="http://adamhouck.files.wordpress.com/2011/10/email.jpg?w=300&h=175" alt="Project" class="float_right" />
+			<p><b>Solution:</b> After a few weeks I made a proposal to create an email module that could be completed relatively quickly using Visual Basic.NET. It could be run by a user or without a GUI as a service.
+Project Description: When set to ‘Automatic’ the program looks in a directory every set amount of seconds for a new XML document generated from the KCML system. It then commences to send out the emails using the default settings unless the XML sets special values (i.e. using a different email, subject line, etc.). If the email has an attachment, the XML contains its location and the email program attaches the file to the message.
+When utilizing the User Interface a user can screen the list of emails, and if necessary, stop the program from sending the selected email(s).
+The program also contains a test button to send a single email with the base settings specified.
+In addition I created a Visual Basic program for each individual user’s computer that allows them to read the archived XML lists on the server and view sent emails for verification.
+The program is currently being used in a veterinary clinic’s accounting department, and for a high school’s sport notification system.
+</p><p><b>Technology Used:</b> Visual Studio 2010, Visual Basic.NET, XML, Simple Mail Transfer Protocol (SMTP)</p>
+	
+			<h2 class="desc">Morrisville Final Exam scheduler</h2>
+			<p><b>Situation: </b>Currently the Registrar at Morrisville State College makes the final exam schedule by hand. This requires many hours of trial and error as regular class times have no method that can be followed without creating conflicts with other classes in student’s schedules. The capstone Application Software class (CITA 450) was tasked with creating an automated solution based on query results from the master course database, written in CSV (Comma-Separated Values) files.
+			</p><img src="http://adamhouck.files.wordpress.com/2011/10/finalexam.png?w=300&h=165" alt="Project2" class="float_right" />
+			<p><b>Solution:</b> The program imports a master list of classes, and assigns each to a course object. Then it imports the Conflict Matrix and assigns the conflicting courses to the associated course object, which has a parameter that is a list of courses it conflicts with. The Conflict Matrix is a list of courses that have students enrolled in both. For example ‘CITA197, BSAD123, 3′ indicates that three students are enrolled in both CITA197 and BSAD123.
+It then loads all the courses into a list View. Clicking on a course shows a list of courses that don’t conflict, and a list of courses that conflict with the selected course.
+			</p>
+		
+			<p class="no_margin"><b>Technology Used:</b> Visual Studio 2010, Visual Basic.net, Comma-Separated Values</p>
+               
+                
+              
+     </div>
+     <div class="contentBottom"></div>
+
+	</div>
+
+</div>
+             
+</body>
+<script type="text/javascript">
+window.onload=setTimeout("changeImage()", 0);
+</script>
+</html>
