@@ -3,7 +3,7 @@
 @import url(reset.css);
 
 .container {
-    width:60em;
+	width:60em;
 	margin:0 auto;
 	position:relative; 
 }
