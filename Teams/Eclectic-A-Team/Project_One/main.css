@@ -1,0 +1,38 @@
+.pad{
+padding-left:10px;padding-right:10px
+}
+body
+{
+background-color:#000000;
+
+}
+h1
+{
+color:#B93B8F;
+text-align:center;
+font-family:"Verdana";
+}
+
+h3
+{
+color:#FF0040;
+text-align:center;
+font-family:"Verdana";
+}
+
+p, table
+{
+font-family:"Verdana";
+font-size:14px;
+color:#FFFFFF;
+}
+
+table{
+margin-left: auto;
+margin-right: auto;
+}
+
+a:link {color:#B93B8F;} 
+a:visited {color:#FF0040;} 
+a:hover {color:#FF0040;}
+a:active {color:#FFFFFF;}

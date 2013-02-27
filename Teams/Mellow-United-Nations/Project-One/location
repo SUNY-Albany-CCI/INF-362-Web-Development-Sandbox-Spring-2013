@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<header>
+<style type="text/css">
+body {background-color:blue; text-align:center;}
+h1 {color:blue; font-family:"Times New Roman", serif; font-size:40px;}
+p {color:blue; font-family:"Times New Roman", serif; font-size:20px;}
+.div1 {background-color:orange; width:1200px; margin:auto;}
+.div1-1 {background-color:orange; margin:auto; width:400px;}
+.div1-1-1{background-color:orange; float:left; width:100px; }
+.div2{background-color:orange; margin:auto; width:800px
+<!--Box coding-->
+div.img
+{
+  margin: 2px;
+  border: 1px solid #0000ff;
+  height: auto;
+  width: auto;
+  float: left;
+  text-align: center;
+}  
+div.img img
+{
+  display: inline;
+  margin: 3px;
+  border: 1px solid #ffffff;
+}
+div.img a:hover img {border: 1px solid #0000ff;}
+div.desc
+{
+  text-align: center;
+  font-weight: italic bold;
+  width: 120px;
+  margin: 2px;
+}
+</style>
+</header>
+
+<body>
+
+<h2><center><b><i>Game Locations</i></b></center></h2>
+<div class="img">
+ <a target="_blank" href="http://maps.google.com/maps?oe=utf-8&rls=org.mozilla:en-US:official&client=firefox&um=1&ie=UTF-8&q=toronto+raptors+stadium&fb=1&gl=us&hq=toronto+raptors+stadium&cid=0,0,6359875317936854032&sa=X&ei=gXAmUeifAfO90QG3xIGIAQ&ved=0CDgQrwswAQ"><img src="http://t1.gstatic.com/images?q=tbn:ANd9GcSB9FeTY561i6_7UnJJoQk9T5kkxVc0GwrWq3w0psFaG6GArG7Yqw" alt="Design" width="110" height="90"></a>
+ <div class="desc">Feb 22nd - vs. Raptors @Toronto </div><br>
+</div>
+<div class="img">
+ <a target="_blank" href="http://maps.google.com/maps?oe=utf-8&rls=org.mozilla:en-US:official&client=firefox&um=1&gl=us&hl=en&ie=UTF-8&q=New+York+knicks+stadium&fb=1&gl=us&hq=New+York+knicks+stadium&cid=0,0,415771661180949688&sa=X&ei=QnEmUaGTHpGM0QGc-4DwCQ&ved=0CEcQrwswAQ"><img src="http://4.bp.blogspot.com/-D-nvtOoduHo/TVfR0VIMyAI/AAAAAAAAJOw/ALsAZKTPv6Y/s1600/Philadelphia_76ers_logo18.png" alt="html" width="110" height="90"></a>
+ <div class="desc">Feb 24th - vs. 76ers @New York</div><br>
+</div>
+<div class="img">
+ <a target="_blank" href="http://maps.google.com/maps?oe=utf-8&rls=org.mozilla:en-US:official&client=firefox&um=1&gl=us&hl=en&ie=UTF-8&q=New+York+knicks+stadium&fb=1&gl=us&hq=New+York+knicks+stadium&cid=0,0,415771661180949688&sa=X&ei=QnEmUaGTHpGM0QGc-4DwCQ&ved=0CEcQrwswAQ"><img src="http://www.slamonline.com/online/wp-content/uploads/2010/09/logoprimary_300x3292.jpg" alt="css" width="110" height="90"></a>
+ <div class="desc">Feb 24th - vs. Warriors @New York</div><br>
+</div>
+</body>
+
+
+</html>

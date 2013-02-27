@@ -1,0 +1,33 @@
+body{
+	
+}
+#header
+{
+width: 100%;
+text-align:center;
+margin:0 auto;
+}
+
+
+#content
+{
+float:right;
+width:70%;
+
+-moz-box-flex:1.0; /* Firefox */
+-webkit-box-flex:1.0; /* Safari and Chrome */
+box-flex:1.0;
+border:1px solid red;
+}
+
+#sidebar
+{
+float:left;
+width:30%;
+
+
+-moz-box-flex:2.0; /* Firefox */
+-webkit-box-flex:2.0; /* Safari and Chrome */
+box-flex:2.0;
+border:1px solid blue;
+}

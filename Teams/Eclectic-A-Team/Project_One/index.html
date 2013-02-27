@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="player.css"/>  
+	  <link rel="stylesheet" type="text/css" href="main.css"/>
+      <script src="player.js" type="text/javascript"></script>
+      <title>Eclectic A-Team Project One</title>
+	<script src="http://maps.google.se/maps/api/js?sensor=false"></script>
+  </head>
+
+
+  <body>
+  <h1>The Eclectic A-Team's
+<br>
+ Music Site</h1>
+<h3>Acts coming to the area this Spring</h3>
+    <div style="text-align:center">
+    <table border="1">
+<tr>
+<th>Band/Artist</th>
+<th>Date</th>
+<th>Venue</th>
+<th>Performing City</th>
+</tr>
+<tr>
+<td>Oberhoffer</td>
+<td>3/1/2013</td>
+<td>Washington Avenue Armory</td>
+<td>Albany, NY</td>
+</tr>
+<tr>
+<td>Machine Gun Kelly</td>
+<td>3/1/2013</td>
+<td>Washington Avenue Armory</td>
+<td>Albany, NY</td>
+</tr>
+<tr>
+<td>DJ Pauly D</td>
+<td>4/5/2013</td>
+<td>Washington Avenue Armory</td>
+<td>Albany, NY</td>
+</tr>
+</table> 
+
+<h3>Music Player</h3>
+<p>Sample some music from our upcoming bands.</p>
+    </div>
+      <div id="musicContainer">
+<div id="dropArea" ondrop="drop(event);startMusic()" ondragover="return dragOver(event)">
+<!-- This is the play area, images dragged here will play music if they are recognized -->
+</div>
+<div id="artist">
+<!-- Displays the artist name and song title -->
+</div>
+<div id="musicList" ondragover="dragOver(event)" ondrop="dropReturn(event)">
+<!-- Below is the image that can be dragged onto the play area -->
+<ul class="images">
+<li>
+<img class="albumArt" id="vaccines" src="vaccines_coverart.jpg" draggable="true"
+ondragstart="return drag(event)" ondragend="dragEnd(event)">
+</li>
+<li>
+<img class="albumArt" id="rockon" src="rockon_coverart.jpg" draggable="true"
+ondragstart="return drag(event)" ondragend="dragEnd(event)">
+</li>
+</ul>
+</div>
+</div>
+<br>
+<div id="music">
+<!-- When the image is dragged into the specified area a music player will show here -->
+</div>
+
+<h3>Need Directions?</h3>
+<p>This script will automatically find your location and give you directions to the Washington Avenue Armory.</p>
+<div id="map"></div>
+<div id="map-directions"></div>
+
+<script>
+(function () {
+var directionsService = new google.maps.DirectionsService(),
+directionsDisplay = new google.maps.DirectionsRenderer(),
+createMap = function (start) {
+var travel = {
+origin : (start.coords)? new google.maps.LatLng(start.lat, start.lng) : start.address, destination : "195 Washington Ave Albany, NY 12210",
+travelMode : google.maps.DirectionsTravelMode.DRIVING
+
+},
+mapOptions = {
+zoom: 6,
+// Default view: SUNY Albany
+center : new google.maps.LatLng(42.686785, -73.822852),
+mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+
+map = new google.maps.Map(document.getElementById("map"), mapOptions);
+directionsDisplay.setMap(map);
+directionsDisplay.setPanel(document.getElementById("map-directions"));
+directionsService.route(travel, function(result, status) {
+if (status === google.maps.DirectionsStatus.OK) {
+directionsDisplay.setDirections(result);
+}
+});
+};
+
+// Check for geolocation support
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(function (position) {
+// Success!
+createMap({
+coords : true,
+lat : position.coords.latitude,
+lng : position.coords.longitude
+});
+},
+function () {
+// Gelocation fallback: Defaults to Albany, New York
+createMap({
+coords : false,
+address : "Albany, New York"
+});
+}
+);
+}
+else {
+// No geolocation fallback: Defaults to Albany, New York
+createMap({
+coords : false,
+address : "Albany, Ney York"
+});
+}
+})();
+</script>
+  </body>
+</html>
