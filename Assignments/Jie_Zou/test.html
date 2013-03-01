@@ -1,0 +1,176 @@
+<!Doctype Html> 
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css" /> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="index.js"></script>
+<link rel="stylesheet" type="text/css" href="index2.css"  />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="ddaccordion.js">
+
+/***********************************************
+* Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+</script>
+
+
+<style type="text/css">
+
+.mypets{ /*header of 1st demo*/
+cursor: hand;
+cursor: pointer;
+padding: 2px 5px;
+border: 1px solid gray;
+background: #E1E1E1;
+}
+
+.openpet{ /*class added to contents of 1st demo when they are open*/
+background: yellow;
+}
+
+.technology{ /*header of 2nd demo*/
+cursor: hand;
+cursor: pointer;
+font: bold 14px Verdana;
+margin: 10px 0;
+}
+
+
+.openlanguage{ /*class added to contents of 2nd demo when they are open*/
+color: green;
+}
+
+.closedlanguage{ /*class added to contents of 2nd demo when they are closed*/
+color: red;
+}
+
+</style>
+
+<script type="text/javascript">
+
+//Initialize first demo:
+ddaccordion.init({
+	headerclass: "myphone", //Shared CSS class name of headers group
+	contentclass: "thephone", //Shared CSS class name of contents group
+	revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content.
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	scrolltoheader: false, //scroll to header each time after it's been expanded by the user?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["", "openpet"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["none", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+//Initialize 2nd demo:
+ddaccordion.init({
+	headerclass: "technology", //Shared CSS class name of headers group
+	contentclass: "thelanguage", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content.
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	scrolltoheader: false, //scroll to header each time after it's been expanded by the user?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["closedlanguage", "openlanguage"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["prefix", "<img src='http://i13.tinypic.com/80mxwlz.gif' style='width:13px; height:13px' /> ", "<img src='http://i18.tinypic.com/6tpc4td.gif' style='width:13px; height:13px' /> "], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+</script>
+</head>
+
+<body>
+
+<div class = "container"> 
+  <img src = "logo.jpg">
+<!--<div id = "header">
+  <img src = "logo.jpg">
+  </div> -->
+  
+<br/>
+<br/>
+
+
+<div class="nav-container">
+
+  <ul class="nav">
+  <li><a href="#">Home</a></li>
+    <li><a href="../362/tabs.html">Tablets</a></li>
+    <li><a href="#">SmartPhones</a></li>
+ 
+  </ul>
+</div>
+
+
+
+
+<br />
+<br />
+
+<a href="#" onClick="ddaccordion.toggleone('myphone', 0); return false">Sushi Chef</a> | <a href="#" onClick="ddaccordion.toggleone('myphone', 1); return false">IT Internship</a> | <a href="#" onClick="ddaccordion.toggleone('myphone', 2); return false">Website</a> 
+<h3 class="myphone">Sushi Chef</h3>
+<div class="thephone">
+<img src="http://www.todayifoundout.com/wp-content/uploads/2011/12/sushi.jpg" />
+<h3>Skills</h3>
+<ul><li>I know how to prepare the ingredients for the sushi</li> 
+<li>I know how to make the rolls and sushi</li>
+</ul>
+</div>
+
+<h3 class="myphone">IT Internship</h3>
+<div class="thephone">
+<img src="http://newvaluestreams.com/wordpress/wp-content/uploads/2009/12/computer_nerd.jpeg" />
+<h3>Skills</h3>
+<ul><li>I had to convert alot of cassette tape into mp4 </li> 
+<li>I had to photoshop alot of pictures</li>
+</li> If anyone has any computer problems, I have to fix it</li>
+</ul>
+</div>
+
+
+
+
+<h3 class="myphone">Website</h3>
+<div class="thephone">
+<img src="http://www.menuclub.com/menus/3095/page_1.jpg" />
+<h3>Skills</h3>
+<ul><li>I had to make a Japanese Menu for a class </li> 
+<li>I had to use HTML and Javascript</li>
+</ul>
+</div>
+</div>
+
+
+
+</div>
+
+</body>
+</html> 

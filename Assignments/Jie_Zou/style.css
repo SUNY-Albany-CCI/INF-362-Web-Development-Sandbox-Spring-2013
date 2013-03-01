@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	background-image: url(background1.jpg);
+	float: left;
+} 
+
+#header
+{
+	text-align:center;
+	height: 150px;
+	margin: auto;
+	font-size:x-large;
+	font-family:"Courier New", Courier, monospace; 
+	background: rgb(226,226,226); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(219,219,219,1)), color-stop(51%,rgba(209,209,209,1)), color-stop(100%,rgba(254,254,254,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+} 
+
+.container{
+	text-align: center;
+	width: 95%;
+	height: 100%;
+	margin: auto;
+	opacity: 0.95;
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+
+
+
+
+
+
+
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+
+}
+
+
+a {
+	text-decoration: none;
+}
+p {
+	margin: 0 0 15px 0;
+	color: #0F9;
+	font-size: 14px;
+}
+small {
+	font-size: 0.5em;
+}
+
+.clear {
+	clear: both;
+}
+.content {
+	width: 740px;
+	margin: 0 auto;
+	background: #EAB988;
+	display: block;
+	height: auto;
+	padding: 30px 20px;
+	position: relative;
+	top: -15px;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.1)
+}
+
+.main {
+	width: 65%;
+	float: left;
+	text-align: justify;
+}
+.side {
+	margin-left: 10px;
+	width: 30%;
+	float: right;
+}
+.side p {
+	text-align: justify;
+}
+.header {
+	background: #79AE92;
+	margin: 0;
+	padding: 10px;
+	position: relative;
+	z-index: 1;
+	border: 1px solid rgba(0,0,0,0.05)
+}
+.header h1 {
+	color: #1C5560;
+	font-size: 30px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: -1px;
+	font-family: "Seymour One";
+	text-shadow: 0px 1px 1px #fff;
+}
+.header:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-bottom: 10px solid transparent;
+	border-top: 0px solid transparent;
+	position: absolute;
+	border-right: 10px solid #1C5560;
+	bottom: -11px;
+	left: -1px;
+}
+.header:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-bottom: 10px solid transparent;
+	border-top: 0px solid transparent;
+	position: absolute;
+	border-left: 10px solid #1C5560;
+	bottom: -11px;
+	right: -1px;
+}
+.footer {
+	background: rgba(0,0,0,0.2);
+	padding: 50px 0;
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+/******** Nav ********/
+.nav-container {
+	height: 40px;
+	
+}
+.nav {
+	margin:40px;
+	text-align: center;
+}
+.nav li {
+	float: left;
+	list-style-type:none
+}
+.nav li:hover {
+	position: relative;
+	padding-top: 1px; 
+	padding-bottom: 1px; 
+	}
+.nav li a {
+	display: inline-block;
+	color: #00BFFF;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	margin: 10px 1px -1px;
+	padding: 0px 50px;
+}
+/* .nav a:hover has been extracted from designshack.net*/
+.nav a:hover {
+	background: #BFEFFF;
+	color: black;
+	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	-moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-webkit-transform: rotate(-7deg);
+	-moz-transform: rotate(-7deg);
+	-o-transform: rotate(-7deg);
+}
+
+/*Banner Editor*/
+.banner {
+	width: 800px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	background: clear;
+}
+.banner .slide {
+	border-radius: 0px;
+}
+/* .pager has been extracted from designshack.net*/
+.pager {
+	cursor: crosshair;
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	background: grey;
+	border-radius: 10px;
+	padding: 0px 0.7em;
+	list-style: none;
+	margin-left: 350px;
+}
+.pager li {
+	float: left;
+	font-size: 1em;
+	line-height: 1;
+}
+.pager li:hover {
+	color: #B2DFEE
+}
+.pager .on {
+	color: #00BFFF	;
+}
+
+body h1 {
+	color: #0066FF;
+	font-family: "Orienta";
+	font-size: 30px;
+	text-transform: uppercase
+}
+.p_blue{
+	color: #6996ADF;
+	font-family: "Orienta";
+	font-size: 12px;
+	}
+.arch{
+	color: gold;
+}
+table, td
+{
+	padding: 5px 165px;
+	border: 0px;
+	table-align:center;
+}
+th{
+	border-color:gray;
+	border-style: solid;
+}
+td{
+	text-align:center;
+}
+.dark p{
+	background: white;
+	color: #6996AD;
+	text-align: left;
+}
+#myreel{ /*sample CSS for demo*/
+border:15px solid black;
+margin: auto;
+}
+
+.paginate{
+width: 330px;
+margin-top:5px;
+font:bold 14px Arial;
+text-align:center;
+margin: auto;
+}
