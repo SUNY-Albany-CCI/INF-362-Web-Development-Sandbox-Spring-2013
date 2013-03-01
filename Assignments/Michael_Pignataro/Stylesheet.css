@@ -1,0 +1,27 @@
+
+
+body
+{ 
+	background-color: #00F;
+}
+h1
+{
+	font-family: "MS Serif", "New York", serif;
+	font-size:30px;
+	background-color: #F00;
+	text-align:center
+}
+p
+{
+	font-family:Times New Roman;
+	color:#FFF;
+	font-size:24px;
+	margin-left:30;
+	margin-right:60;
+	text-align:center;
+
+}
+
+a:link{color:blue}
+a:visited{color:#FFF}
+a:hover{color:#000}
