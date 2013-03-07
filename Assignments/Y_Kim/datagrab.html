@@ -10,6 +10,7 @@
 		
 <!------------------------BEGIN JAVASCRIPT------------------------>	
 <script type="text/javascript" charset="utf-8" src="scripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/accessdb.js"></script>
 <script language="javascript" src="scripts/jquery.pop.js" type="text/javascript"></script>
 <script type="text/javascript">
 			$(document).ready(function(){
@@ -34,6 +35,81 @@
      $.pop();
    });
 </script>
+     <script>
+         $(document).ready(function(){
+ 
+            $("#run").click(function(){
+               //Configure the output options
+               var options = {};
+               if($('#type').val() == "xml") {
+                  options["xml"] = {
+                     stringOut   : true,
+                     formatDates : "U"
+                  };
+               }
+               else if($('#type').val() == "xmlD") {
+                  options["xml"] = true;
+               }
+               else if($('#type').val() == "table" || $('#type').val() == "tableS") {
+                  var sOut = false;
+                  if($('#type').val() == "tableS") {
+                     sOut = true;
+                  }
+                  var nohdrs = true;
+                  if($('#hdrs').val() == "false") {
+                     nohdrs = false;
+                  }
+                  options["table"] = {
+                     stringOut   : sOut,
+                     noHeaders   : nohdrs,
+                     className   : $('#clss').val(),
+                     id          : $('#id').val(),
+                     formatDates : {
+                        ExpDate  : $('#dates').val()
+                     }
+                  };
+               }
+               else if($('#type').val() != "jsonO") {
+                  options[$('#type').val()] = true;
+               }
+ 
+               //Execute the query
+               var tval = myDB.query($('#query').val(), options);
+ 
+               //Format "XML String" and "HTML Table String" output for display
+               if($('#type').val() == "xml" || $('#type').val() == "tableS") {
+                  tval = tval.replace(/\>/g, '&#62;');
+                  tval = tval.replace(/\<\//g, '&#60;/');
+                  tval = tval.replace(/\</g, '<br />&#60;');
+               }
+ 
+               if(typeof(tval) == "object" && !tval.innerHTML) {
+                  if($('#type').val() == "jsonO") {
+                     alert("JSON Object returned with " + tval.length + " rows.");
+                  }
+                  else if($('#type').val() == "xmlD") {
+                     alert("XML Document Object returned with " + tval.getElementsByTagName("record").length + " rows.");
+                  }
+               }
+               else {
+                  //Display the Results
+                  $("#res").html(tval);
+               }
+            });
+ 
+            $("#type").change(function(){
+              if(this.value.indexOf("table") < 0) {
+                 $("#tableConf").hide();
+              }
+              else {
+                 $("#tableConf").show();
+              }
+            });
+ 
+         });
+         var currentPath = ((location+"").replace(/%20/g, " ").replace("file:///", "").replace("/", "\\").replace("index.html", ""));
+         var myDB = new ACCESSdb(currentPath+"AdmnCodes.mdb", {showErrors:true});
+      </script>
 <!------------------------END JAVASCRIPT------------------------->
 <body id="datagrab">
 
@@ -92,13 +168,41 @@
 </div>
 
 <div id="page-wrap">
-<center>
-<form action="insert.php" method="post">
-Firstname: <input type="text" name="firstname" />
-Lastname: <input type="text" name="lastname" />
-Age: <input type="text" name="age" />
-<input type="submit" />
-</form>
+      <div style="float:left;margin-right:15px">
+         <textarea id="query" style="width:365px;height:100px">
+SELECT SubscrDetails.CustNo, SubscrDetails.ItemCode, SubscrDetails.Quantity, AdminCodes.StockNumber, AdminCodes.ShortItemName, AdminCodes.Supplements, SubscrDetails.ExpDate, [Quantity]*[Supplements] AS Total, SubscrDetails.GroupNo
+FROM Customers
+INNER JOIN (AdminCodes INNER JOIN SubscrDetails ON AdminCodes.ItemCode = SubscrDetails.ItemCode)
+ON Customers.CustNo = SubscrDetails.CustNo
+ORDER BY SubscrDetails.CustNo
+         </textarea>
+         <br />
+         Output Format:
+         <select id="type">
+            <option value="table">HTML Table Obj</table>
+            <option value="tableS">HTML Table String</table>
+            <option value="jsonO">JSON Obj</table>
+            <option value="json">JSON String</table>
+            <option value="xmlD">XML Doc Obj</table>
+            <option value="xml">XML String</table>
+         <select>
+         <input type="button" id="run" value="Run Query" />
+         <div id="tableConf">
+            Id:
+            <input id="id" size="17" />
+            Class:
+            <input id="clss" value="myTable" />
+            <br />
+            Show Headers:
+            <select id="hdrs">
+               <option value="false">Yes</table>
+               <option value="true">No</table>
+            <select>
+            Dates:
+            <input id="dates" size="16" value="hh:mma MMM dd, yyyy" />
+         </div>
+      </div>
+      <div id="res"></div>
 </center>
 </div>
 
