@@ -1,0 +1,6 @@
+h3 {text-align:left;decoration:underline;color:#00FFCC;}
+h2 {text-decoration:underline;text-align:center; font-size:200%;font-style:italic;color:#00FFCC;}
+p {color:#0F9;font-size: 14px}
+h4 {color:#0F9;font-size:20px; text-align:center}
+a:link {color:aqua;} 
+a.button:link {text-align:center; font-size:200%;color:aqua; }

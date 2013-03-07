@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>My Resume</title>
+<style type="text/css">
+body {font-family:Comic Sans MS;font-size:12pt;}
+.div1 {background-color:#D8D8D8;padding:4px;}
+.div2 {margin-left:20px;margin-bottom:1em;}
+.span1 {font-weight:bold;}
+</style>
+</head>
+<body>
+<h2>Kenneth Perez</h2>
+<!--Theme-->
+<div class="div1">
+<span class="span1">Work Experience:</span>
+</div>
+<p>Lincoln Restler Campaign, Brooklyn, NY  August 2012 - September 2012
+Canvasser
+•	Canvassed key areas of support for Committeeman Lincoln Restler.
+•	Built key support throughout the community.
+•	Assisted the campaign manager in deploying field canvassing strategies and coordinating field message with members of the public. 
+<br>
+<br>
+La Salle Academy, New York, NY 		September 2008 - June 2009	
+Work-Study program 
+•	Responsible for the general maintenance of campus grounds.
+•	Assisted faculty members in various clerical projects.
+<br>
+<br>
+Tapia Auto Repair, Brooklyn, NY 		Summer 2008 		
+Car Mechanic & Office Assistant
+•	Provided customer service by fixing and inspecting cars.
+•	Executed financial transactions involving cash, credit, and checks.
+<br>
+<br>
+The Boys Club, New York, NY	 	Summer 2007	
+Staff Member/Camp Counselor 									
+•	Assisted as a guide for younger kids and participated in summer project.
+•	Managed behavioral issues on camp grounds.
+<br>
+<br>
+<!--Theme-->
+<div class="div1">
+<span class="span1">Computer Skills:</span>
+Languages: HTML, CSS, Java
+Operating Systems: Windows 7, Windows NT/XP, Macintosh OS X
+Databases and other software: MS Access, MS Office, Dreamweaver
+</div>
+<br>
+<br>
+<!--Theme-->
+<div class="div1">
+<span class="span1">languageSkills:</span>
+Bilingual (Fluent in English and Spanish)
+</div>
+</p>
+</body>
+</html>

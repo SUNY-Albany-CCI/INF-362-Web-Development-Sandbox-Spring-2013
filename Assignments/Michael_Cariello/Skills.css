@@ -1,0 +1,156 @@
+body{
+background-color:black;
+}
+h1{color:white;font-family:'Herr Von Muellerhoff',cursive;font-size:80px;}
+p{color:white;font-family:'Arial';}
+h2{color:white;font-family:'Herr Von Muellerhoff',cursive;font-size:40px;}
+
+
+.header{
+background-color:black;
+ border-radius: 10px;
+ box-shadow: 3px 10px 40px 15px #FFFFFF;
+}
+
+.line{
+background-color:green;
+border-radius: 10px;
+width:100%;
+height:30px;
+}
+.home{
+display:block;
+position:relative;
+background-color:#000000;
+  width:80%;
+  height:100%;
+  margin:-150px 210px;
+  border-radius:30px;
+}
+
+.bar1{
+display:block;
+position:relative;
+background-color:#0ff;
+border-radius:10px;
+width:3%;
+height:50%;
+float:left;
+margin:-405px 50px;
+}
+.bar2{
+display:block;
+position:relative;
+background-color:#0f0;
+border-radius:10px;
+width:3%;
+height:50%;
+float:left;
+margin:-405px 100px;
+}
+.bar3{
+display:block;
+position:relative;
+background-color:#0066ff;
+border-radius:10px;
+width:3%;
+height:50%;
+float:left;
+margin:-405px 150px;
+}
+.bar4{
+display:block;
+position:relative;
+background-color:#0066ff;
+border-radius:10px;
+width:3%;
+height:50%;
+float:left;
+margin:-405px 175px;
+}
+
+
+
+.nav-container {
+    position: relative;
+    display: block;
+}
+
+.nav-vert {
+    width: 200px;
+    display: block;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    position: relative;
+}
+.nav-vert li {
+  margin:10px
+}
+.nav-vert li a {
+    width: 200px;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background: #000;
+    height: 20px;
+    color: #fff;
+    font-family:'Vampiro',cursive;
+    font-weight: 700;
+    -webkit-transition-timing-function: ease-out;
+ -webkit-transition-duration: 500ms;
+  border-radius:4px;
+}
+
+.nav-vert li a span {
+    float: right;
+}
+
+.nav-vert a:hover {
+    background: #fff;
+    color: #000;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    top: 380px;
+    left: 10px;
+    z-index: -1;
+  -webkit-transition-timing-function: ease-out;
+ -webkit-transition-duration: 500ms;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.nav-vert a:hover .bar {
+  -webkit-transition-timing-function: ease-out;
+ -webkit-transition-duration:500ms;
+    width: 500px;
+
+}
+
+.bar1 {
+    background: #00f;
+}
+
+.bar2 {
+    background: #0ff;
+}
+
+.bar3 {
+    background: #0f0;
+}
+
+.bar4 {
+    background: #06f;

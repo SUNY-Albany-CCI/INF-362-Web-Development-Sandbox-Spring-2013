@@ -1,0 +1,6 @@
+body {background-color:black; text-align:center;}
+h1 {color:green; font-family:"Times New Roman", serif; font-size:40px;}
+p {color:yellow; font-family:"Times New Roman", serif; font-size:20px;}
+.div1 {background-color:black; width:1200px; margin:auto;}
+.div1-1 {background-color:black; margin:auto; width:200px;}
+.div2{background-color:black; margin:auto; width:900px

@@ -1,0 +1,112 @@
+<!Doctype Html> 
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css" /> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="index.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css"  />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<style type="text/css">
+
+#myreel{ /*sample CSS for demo*/
+border:15px solid black;
+}
+
+.paginate{
+width: 330px;
+margin-top:5px;
+font:bold 14px Arial;
+text-align:center;
+}
+
+</style>
+
+<script src="reelslideshow.js" type="text/javascript">
+
+/***********************************************
+* Continuous Reel Slideshow- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+var firstreel=new reelslideshow({
+	wrapperid: "myreel", //ID of blank DIV on page to house Slideshow
+	dimensions: [300, 200], //width/height of gallery in pixels. Should reflect dimensions of largest image
+	imagearray: [
+		["smartphone.jpg", "http://www.albany.edu"], 		
+		["desktop.jpg", "http://www.albany.edu"],
+		["gamingsystem.jpg", "http://www.albany.edu"],
+		["tablet.jpg", "http://www.albany.edu"],
+	
+	],
+	displaymode: {type:'auto', pause:2000, cycles:999, pauseonmouseover:true},
+	orientation: "h", //Valid values: "h" or "v"
+	persist: true, //remember last viewed slide and recall within same session?
+	slideduration: 300 //transition duration (milliseconds)
+})
+
+</script>
+
+
+</head>
+
+<body>
+
+<div class = "container"> 
+  <img src = "logo.jpg">
+<!--<div id = "header">
+  <img src = "logo.jpg">
+  </div> -->
+  
+<br/>
+<br/>
+
+
+<div class="nav-container">
+
+  <ul class="nav">
+  <li><a href="#">Home</a></li>
+    <li><a href="../362/tabs.html">Tablets</a></li>
+    <li><a href="#">SmartPhones</a></li>
+    <li><a href="#">Computers</a></li>
+    <li><a href="#">Gaming Systems</a></li>
+    <li><a href="#">Peripherals</a></li>
+  </ul>
+</div>
+
+
+<object classid="clsid:d27cbd6eae6d-11cf-96b8-444553540000" id="super">
+<param name="src" value="iremember.mp3" />
+<param name="controller" value="true"/>
+<param name="autoplay" value="true"/>
+<param name="loop" value="true"/>
+
+<!--<![if !IE]>-->
+<object type="audio/x-midi" data=" iremember.mp3">
+<param name="src" value="iremember.mp3" />
+<param name="controller" value="true"/>
+<param name="autoplay" value="true"/>
+<param name="loop" value="true"/>
+</object>
+<!--<![endif]-->
+</object>
+
+</br>
+</br>
+
+<div id="myreel"></div>
+
+<div class="paginate">
+<a href="javascript:firstreel.navigate('back')" style="margin-right:200px;"> ( back </a>  <a href="javascript:firstreel.navigate('forth')"> forth ) </a>
+</div>
+</div>
+
+</body>
+</html> 
