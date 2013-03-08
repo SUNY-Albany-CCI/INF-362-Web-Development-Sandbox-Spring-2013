@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-image:url(../images/bg.jpg);
+	background-position: bottom right;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+p {
+	text-align:center;
+}
+
+h1,h2,h3 {
+	text-align:center;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+
+#container {
+	position:relative;
+	float:left;
+	margin-top:3em;
+	margin-left:10em;
+}

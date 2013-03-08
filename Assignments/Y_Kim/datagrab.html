@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+<title>HOTLINE DATABASE</title>
+<!------------------------BEGIN CSS----------------------->
+<link rel="stylesheet" href="css/bsa.css" type="text/css" media="screen" />
+<link href="css/pop.css" media="all" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="css/colorbox.css" />
+<!------------------------END CSS------------------------->
+		
+<!------------------------BEGIN JAVASCRIPT------------------------>	
+<script type="text/javascript" charset="utf-8" src="scripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/accessdb.js"></script>
+<script language="javascript" src="scripts/jquery.pop.js" type="text/javascript"></script>
+<script type="text/javascript">
+			$(document).ready(function(){
+
+				//Full Caption Sliding (Hidden to Visible)
+				$('.boxgrid.captionfull').hover(function(){
+					$(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
+				}, function() {
+					$(".cover", this).stop().animate({top:'260px'},{queue:false,duration:160});
+				});
+
+				//Partial Sliding (Only show some of background)
+				$('.boxgrid.peek').hover(function(){
+					$(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:160});
+				}, function() {
+					$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});
+				});
+			});
+		</script>
+<script type='text/javascript'>
+   $(document).ready(function(){
+     $.pop();
+   });
+</script>
+     <script>
+         $(document).ready(function(){
+ 
+            $("#run").click(function(){
+               //Configure the output options
+               var options = {};
+               if($('#type').val() == "xml") {
+                  options["xml"] = {
+                     stringOut   : true,
+                     formatDates : "U"
+                  };
+               }
+               else if($('#type').val() == "xmlD") {
+                  options["xml"] = true;
+               }
+               else if($('#type').val() == "table" || $('#type').val() == "tableS") {
+                  var sOut = false;
+                  if($('#type').val() == "tableS") {
+                     sOut = true;
+                  }
+                  var nohdrs = true;
+                  if($('#hdrs').val() == "false") {
+                     nohdrs = false;
+                  }
+                  options["table"] = {
+                     stringOut   : sOut,
+                     noHeaders   : nohdrs,
+                     className   : $('#clss').val(),
+                     id          : $('#id').val(),
+                     formatDates : {
+                        ExpDate  : $('#dates').val()
+                     }
+                  };
+               }
+               else if($('#type').val() != "jsonO") {
+                  options[$('#type').val()] = true;
+               }
+ 
+               //Execute the query
+               var tval = myDB.query($('#query').val(), options);
+ 
+               //Format "XML String" and "HTML Table String" output for display
+               if($('#type').val() == "xml" || $('#type').val() == "tableS") {
+                  tval = tval.replace(/\>/g, '&#62;');
+                  tval = tval.replace(/\<\//g, '&#60;/');
+                  tval = tval.replace(/\</g, '<br />&#60;');
+               }
+ 
+               if(typeof(tval) == "object" && !tval.innerHTML) {
+                  if($('#type').val() == "jsonO") {
+                     alert("JSON Object returned with " + tval.length + " rows.");
+                  }
+                  else if($('#type').val() == "xmlD") {
+                     alert("XML Document Object returned with " + tval.getElementsByTagName("record").length + " rows.");
+                  }
+               }
+               else {
+                  //Display the Results
+                  $("#res").html(tval);
+               }
+            });
+ 
+            $("#type").change(function(){
+              if(this.value.indexOf("table") < 0) {
+                 $("#tableConf").hide();
+              }
+              else {
+                 $("#tableConf").show();
+              }
+            });
+ 
+         });
+         var currentPath = ((location+"").replace(/%20/g, " ").replace("file:///", "").replace("/", "\\").replace("index.html", ""));
+         var myDB = new ACCESSdb(currentPath+"AdmnCodes.mdb", {showErrors:true});
+      </script>
+<!------------------------END JAVASCRIPT------------------------->
+<body id="datagrab">
+
+<h1>WHERE DID MY OUTSOURCED REPOSITORIES GO</h1>
+
+<div id="boxwrapper" style="max-width:912px; position: relative;">
+<center>
+<div class="boxgrid">
+	<div class="pop">
+	<div id="bright">
+		<p>i design, dream, decay</p>
+		<p>i enjoy weird stuff</p>
+		<p>people don't like the weird though</p>
+		<p>it makes me feel bad</p>
+		<br />
+		<p>i do stuff for myself</p>
+		<p>because i've failed too much</p>
+		<p>the show was over</p>
+		<br />
+		<p>friends call me venture</p>
+		<p>my enemies also call me venture</p>
+		<p>either way i'm a loser, baby</p>
+		<br />
+		<p>so why don't you kill me</p>
+	</div>
+	</div>
+<a href="index.html"><img src="images/LOGO.png" onmouseover="this.src='images/LOGO-2.gif'" onmouseout="this.src='images/LOGO.png'"/></a>
+</div>
+            
+<div class="boxgrid captionfull">
+<a href="projects.html"><img src="images/blood-forest.png"/></a>
+	<div class="cover boxcaption">
+	<h3>Projects</h3>
+	</div>		
+</div>
+
+<br />
+
+<div class="boxgrid captionfull">
+<a href="skills.html"><img src="images/hate-machine.png"/></a>
+	<div class="cover boxcaption">
+	<h3>My Skills</h3>
+	</div>		
+</div>
+
+<div class="boxgrid peek">
+<div class="boxgrid inception captionfull">
+<a href="#"><img src="images/mouth.gif"/></a>
+	<div class="cover boxcaption">
+		<h3>Database Page</h3>
+	</div>	
+</div>
+	<img class="cover" src="images/weird.png"/>
+</div>
+</center>
+</div>
+
+<div id="page-wrap">
+      <div style="float:left;margin-right:15px">
+         <textarea id="query" style="width:365px;height:100px">
+SELECT SubscrDetails.CustNo, SubscrDetails.ItemCode, SubscrDetails.Quantity, AdminCodes.StockNumber, AdminCodes.ShortItemName, AdminCodes.Supplements, SubscrDetails.ExpDate, [Quantity]*[Supplements] AS Total, SubscrDetails.GroupNo
+FROM Customers
+INNER JOIN (AdminCodes INNER JOIN SubscrDetails ON AdminCodes.ItemCode = SubscrDetails.ItemCode)
+ON Customers.CustNo = SubscrDetails.CustNo
+ORDER BY SubscrDetails.CustNo
+         </textarea>
+         <br />
+         Output Format:
+         <select id="type">
+            <option value="table">HTML Table Obj</table>
+            <option value="tableS">HTML Table String</table>
+            <option value="jsonO">JSON Obj</table>
+            <option value="json">JSON String</table>
+            <option value="xmlD">XML Doc Obj</table>
+            <option value="xml">XML String</table>
+         <select>
+         <input type="button" id="run" value="Run Query" />
+         <div id="tableConf">
+            Id:
+            <input id="id" size="17" />
+            Class:
+            <input id="clss" value="myTable" />
+            <br />
+            Show Headers:
+            <select id="hdrs">
+               <option value="false">Yes</table>
+               <option value="true">No</table>
+            <select>
+            Dates:
+            <input id="dates" size="16" value="hh:mma MMM dd, yyyy" />
+         </div>
+      </div>
+      <div id="res"></div>
+</center>
+</div>
+
+</body>
+</html>

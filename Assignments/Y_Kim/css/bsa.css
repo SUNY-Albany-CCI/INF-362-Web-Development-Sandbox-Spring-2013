@@ -1,0 +1,172 @@
+/*--------------------------General--------------------------*/
+
+html, body{
+	margin: 0;
+	padding: 0;
+	height: auto!important;
+	height: 100%;
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+br{margin: 0 0;}
+
+a{color:#C8DCE5;}
+
+h1{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:oblique;
+	font-weight:bolder;
+	font-size:40px;
+	position:relative;
+}
+
+h3{
+	margin: 25px 10px 0 10px;
+	color:#FFF;
+	font:18pt Arial, sans-serif;
+	letter-spacing:-1px;
+	font-size:36px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.clear {
+	float: none;
+	clear: both;
+}
+
+/*----------------------Background images----------------------*/
+
+.bg
+{
+	background-color:#c02942;
+}
+
+#projects
+{
+	background:url("../images/abandoned-tower.jpg");
+}
+
+#skbg
+{
+	background:url("../images/Belltower-logo.png") no-repeat fixed bottom right;
+	background-color:#818181;
+	color:white;
+}
+
+#datagrab
+{
+	background:url("../images/tagged-car.jpg");
+	color:white;
+}
+
+#skills
+{
+	position:relative;
+	left:2em;
+}
+
+/*--------------------------Text List--------------------------*/
+
+#page-wrap
+{
+	text-align:left;
+	font: 15px/20px Georgia, Serif;
+	color:black;
+	position: absolute;
+	right: 0;
+	margin-left:auto;
+	margin-right:3em;
+	width: 400px;
+	padding: 20px;
+	background: white;
+	border-radius:10px;
+}
+
+/*--------------------------Box Grid--------------------------*/
+
+#boxwrapper{
+	padding-top:25px;
+	z-index:5;
+	margin-left:auto;
+	margin-right:auto;
+}
+			
+.boxgrid{ 
+	float:left;
+	width:325px; 
+	height:260px;
+	margin:2px;
+	right:10em;
+	background:#161613; 
+	border:solid 2px #261A0B;
+	border-radius:8px; 
+	overflow:hidden; 
+	position:relative;
+}
+			
+.boxgrid img{ 
+	position:absolute; 
+	top:0; 
+	left:0; 
+	border:0; 
+}
+				
+.boxgrid p{ 
+	padding:0 10px; 
+	color:#afafaf; 
+	font-weight:bold; 
+	font:10pt "Lucida Grande", Arial, sans-serif; 
+}
+				
+.boxgrid .inception{bottom:4px; right:4px;}
+				
+.boxcaption{ 
+	float:left; 
+	position:absolute;
+	top:260px;
+	text-align:left; 
+	background:#000; 
+	height:100px; 
+	width:100%; 
+	opacity:0.8; 
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+.captionfull .boxcaption{
+	top:260;
+	left:0;
+}
+
+*{padding:0px; margin:0px;}
+				
+/*--------------------------Gallery--------------------------*/
+
+.gallery{margin:0 15px; position:absolute; left:2px;}
+
+.gallery ul{
+	display:inline;
+	overflow:hidden;
+	list-style:none;
+	margin:0;
+	padding:0;
+	}
+
+.gallery ul li{
+	position:relative;
+	left:4em;
+	display:block;
+	float:left;
+	margin:0 10px 10px 0;
+	}
+
+.gallery ul li img{
+	width:50%;
+	height:50%;
+	padding:3px;
+	background-color:#FC3;
+	}
