@@ -1,0 +1,14 @@
+{{extend 'layout.html'}}
+<h2>Students at {{=department.name}}</h2> 
+<table>
+{{for student in students:}} 
+<tr>
+<td>{{=A(student.name, _href=URL('student_logs', args=student.id))}}</td>
+<td>{{=A('edit', _href=URL('student_edit', args=student.id))}}</td> 
+</tr> 
+{{pass}} 
+<tr> 
+<td>{{=A('add student', _href=URL('student_create', args=department.id))}}</td> 
+</tr>
+</table>
+
